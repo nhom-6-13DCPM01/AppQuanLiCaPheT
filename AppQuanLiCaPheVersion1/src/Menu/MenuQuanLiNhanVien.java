@@ -3,7 +3,7 @@ package Menu;
 import java.util.*;
 import Manage.QuanLiNhanVien;
 import Object.NhanVien;
-
+//version 1
 public class MenuQuanLiNhanVien {
 	private QuanLiNhanVien quanLiNhanVien = new QuanLiNhanVien();
 	boolean nhapTiep = false;
@@ -70,5 +70,9 @@ public class MenuQuanLiNhanVien {
 			NhanVien nhanVien = (NhanVien)i.next();
 			nhanVien.display();
 		}
+	}
+	public void nhap() {
+		System.out.println("version 1");
+		System.out.println("Version 2");
 	}
 }
