@@ -55,21 +55,6 @@ public class NhanVien extends Nguoi{
 	public String toString() {
 		return super.toString()+"NhanVien [idNhanVien=" + idNhanVien + ", chucVu=" + chucVu + "]";
 	}
-	public void display() {
-		System.out.println(this.toString());
-	}
-	public void input() {
-		System.out.print("Nhập tên nhân viên: ");
-		this.setTen(sc.nextLine());
-		System.out.print("Nhập địa chỉ: ");
-		this.setDiaChi(sc.nextLine());
-		System.out.print("Nhập email: ");
-		this.setEmail(sc.nextLine());
-		System.out.print("Nhập ngày sinh: ");
-		this.setNgaySinh(sc.nextLine());
-		System.out.print("Nhập số điện thoại: ");
-		this.setSoDienThoai(Integer.parseInt(sc.nextLine()));
-		System.out.print("Nhập chức vụ: ");
-		this.setChucVu(sc.nextLine());
-	}
+	
+	
 }

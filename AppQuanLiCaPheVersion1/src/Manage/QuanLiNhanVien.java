@@ -29,20 +29,14 @@ public class QuanLiNhanVien {
 			}
 		}
 	}
-	public void suaThongTinNhanVienTheoID(int ID) {
+	public NhanVien suaThongTinNhanVienTheoID(int ID) {
 		for(Iterator<NhanVien> i = this.quanLiNhanVien.iterator();i.hasNext();) {
 			NhanVien nhanVien = (NhanVien)i.next();
 			if(nhanVien.getIdNhanVien() == ID) {
-				nhanVien.input();
-				break;
+				return nhanVien;
 			}
 		}
-	}
-	public void xuat() {
-		for(Iterator<NhanVien> i = this.getQuanLiNhanVien().iterator();i.hasNext();) {
-			NhanVien nhanVien = (NhanVien)i.next();
-			nhanVien.display();
-		}
+		return null;
 	}
 	public Iterator<NhanVien> timNhanVienTheoID(int ID){
 		for(Iterator<NhanVien> i = this.quanLiNhanVien.iterator();i.hasNext();) {
