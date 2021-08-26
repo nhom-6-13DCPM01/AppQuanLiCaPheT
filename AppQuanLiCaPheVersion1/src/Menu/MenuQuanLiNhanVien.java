@@ -39,6 +39,7 @@ public class MenuQuanLiNhanVien {
 			case 3: this.capNhatNhanVien();nhapTiep = true;break;
 			case 4: this.timNhanVien();nhapTiep = true;break;
 			case 5: this.getQuanLiNhanVien().xuat();nhapTiep = true;break;
+			case 6: System.exit(0); break;
 			default: nhapTiep = false;break;
 			}
 		}while(nhapTiep);
