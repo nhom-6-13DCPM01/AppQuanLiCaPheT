@@ -6,7 +6,6 @@ import Object.TaiKhoan;
 
 public class MenuQuanLiTaiKhoan {
 	private QuanLiTaiKhoan quanLiTaiKhoan = new QuanLiTaiKhoan();
-	boolean nhapTiep = false;
 	static Scanner sc = new Scanner(System.in);
 	
 	public MenuQuanLiTaiKhoan() {
@@ -36,14 +35,14 @@ public class MenuQuanLiTaiKhoan {
 			this.menuQuanLiTaiKhoan();
 			luaChon = Integer.parseInt(sc.nextLine());
 			switch(luaChon) {
-			case 1: this.themTaiKhoan();nhapTiep = true;break;
-			case 2: this.xoaTaiKhoan();nhapTiep = true;break;
-			case 3: this.capNhatTaiKhoan();nhapTiep = true;break;
-			case 4: this.timTaiKhoan();nhapTiep = true;break;
-			case 5: this.getQuanLiTaiKhoan().xuat();nhapTiep = true;break;
-			default: nhapTiep = false;break;
+			case 1: this.themTaiKhoan();break;
+			case 2: this.xoaTaiKhoan();break;
+			case 3: this.capNhatTaiKhoan();break;
+			case 4: this.timTaiKhoan();break;
+			case 5: this.getQuanLiTaiKhoan().xuat();break;
+			default: System.out.println("Bye");break;
 			}
-		}while(nhapTiep);
+		}while(luaChon != 6);
 	}
 	public void themTaiKhoan() {
 		TaiKhoan taiKhoan = new TaiKhoan();

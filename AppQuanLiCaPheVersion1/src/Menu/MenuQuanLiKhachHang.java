@@ -7,7 +7,6 @@ import Object.KhachHang;
 public class MenuQuanLiKhachHang {
 	private QuanLiKhachHang quanLiKhachHang = new QuanLiKhachHang();
 	Scanner sc = new Scanner(System.in);
-	boolean nhapTiep = false;
 	
 	public MenuQuanLiKhachHang() {
 		this.xuLy();
@@ -35,14 +34,14 @@ public class MenuQuanLiKhachHang {
 			this.menuQuanLiKhachHang();
 			luaChon = Integer.parseInt(sc.nextLine());
 			switch(luaChon) {
-			case 1: this.themKhachHang();nhapTiep = true;break;
-			case 2: this.xoaKhachHang();nhapTiep = true;break;
-			case 3: this.capNhatKhachHang();nhapTiep = true;break;
-			case 4: this.timKhachHang();nhapTiep = true;break;
-			case 5: this.getQuanLiKhachHang().xuat();nhapTiep = true;break;
-			default: nhapTiep = false;break;
+			case 1: this.themKhachHang();break;
+			case 2: this.xoaKhachHang();break;
+			case 3: this.capNhatKhachHang();break;
+			case 4: this.timKhachHang();break;
+			case 5: this.getQuanLiKhachHang().xuat();break;
+			default: System.out.println("Bye");break;
 			}
-		}while(nhapTiep);
+		}while(luaChon != 6);
 	}
 	public void themKhachHang() {
 		KhachHang khachHang = new KhachHang();

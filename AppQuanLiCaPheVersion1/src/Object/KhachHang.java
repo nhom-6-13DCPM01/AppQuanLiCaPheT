@@ -52,7 +52,7 @@ public class KhachHang extends Nguoi {
 		this.setDiaChi(sc.nextLine());
 		System.out.print("Nhập email: ");
 		this.setEmail(sc.nextLine());
-		System.out.println("Nhập số điện thoại: ");
+		System.out.print("Nhập số điện thoại: ");
 		this.setSoDienThoai(Integer.parseInt(sc.nextLine()));
 		System.out.print("Nhập ngày sinh: ");
 		this.setNgaySinh(sc.nextLine());

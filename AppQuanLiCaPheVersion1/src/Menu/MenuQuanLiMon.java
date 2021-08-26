@@ -7,7 +7,6 @@ import Object.Mon;
 public class MenuQuanLiMon {
 	private QuanLiMon quanLiMon = new QuanLiMon();
 	Scanner sc = new Scanner(System.in);
-	boolean nhapTiep = false;
 	
 	public MenuQuanLiMon() {
 		this.xuLy();
@@ -35,14 +34,14 @@ public class MenuQuanLiMon {
 			this.menuQuanLiMon();
 			luaChon = Integer.parseInt(sc.nextLine());
 			switch(luaChon) {
-			case 1: this.themMon();nhapTiep = true;break;
-			case 2: this.xoaMon();nhapTiep = true;break;
-			case 3: this.capNhatMon();nhapTiep = true;break;
-			case 4: this.timMon();nhapTiep = true;break;
-			case 5: this.getQuanLiMon().xuat();nhapTiep = true;break;
-			default: nhapTiep = false;break;
+			case 1: this.themMon();break;
+			case 2: this.xoaMon();break;
+			case 3: this.capNhatMon();break;
+			case 4: this.timMon();break;
+			case 5: this.getQuanLiMon().xuat();break;
+			default: System.out.println("Bye");break;
 			}
-		}while(nhapTiep);
+		}while(luaChon != 6);
 	}
 	public void themMon() {
 		Mon mon = new Mon();

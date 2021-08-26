@@ -6,7 +6,6 @@ import Object.NhanVien;
 
 public class MenuQuanLiNhanVien {
 	private QuanLiNhanVien quanLiNhanVien = new QuanLiNhanVien();
-	boolean nhapTiep = false;
 	Scanner sc = new Scanner(System.in);
 	public MenuQuanLiNhanVien() {
 		this.xuLy();
@@ -34,14 +33,14 @@ public class MenuQuanLiNhanVien {
 			this.menuQuanLiNhanVien();
 			luaChon = Integer.parseInt(sc.nextLine());
 			switch(luaChon) {
-			case 1: this.themNhanVien();nhapTiep = true; break;
-			case 2: this.xoaNhanVien();nhapTiep = true; break;
-			case 3: this.capNhatNhanVien();nhapTiep = true;break;
-			case 4: this.timNhanVien();nhapTiep = true;break;
-			case 5: this.getQuanLiNhanVien().xuat();nhapTiep = true;break;
-			default: nhapTiep = false;break;
+			case 1: this.themNhanVien(); break;
+			case 2: this.xoaNhanVien(); break;
+			case 3: this.capNhatNhanVien();break;
+			case 4: this.timNhanVien();break;
+			case 5: this.getQuanLiNhanVien().xuat();break;
+			default: System.out.println("Bye");break;
 			}
-		}while(nhapTiep);
+		}while(luaChon != 6);
 	}
 	public void themNhanVien() {
 		NhanVien nhanVien = new NhanVien();
