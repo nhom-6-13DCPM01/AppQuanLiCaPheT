@@ -71,4 +71,8 @@ public class MenuQuanLiNhanVien {
 			nhanVien.display();
 		}
 	}
+	public void nhap() {
+		System.out.println("version 1");
+		System.out.println("Version 2");
+	}
 }
