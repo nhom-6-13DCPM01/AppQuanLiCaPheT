@@ -66,7 +66,7 @@ public class MenuQuanLiKhachHang {
 		this.getQuanLiKhachHang().xuat();
 		System.out.println("Nhập ID khách hàng cần tìm: ");
 		int ID = Integer.parseInt(sc.nextLine());
-		Iterator<KhachHang> i = this.getQuanLiKhachHang().timKhachHangTheoID(ID-1);
+		Iterator<KhachHang> i = this.getQuanLiKhachHang().timKhachHangTheoID(ID);
 		if(i.hasNext()) {
 			KhachHang khachHang = (KhachHang)i.next();
 			khachHang.display();

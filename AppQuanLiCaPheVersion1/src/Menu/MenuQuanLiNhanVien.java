@@ -65,7 +65,7 @@ public class MenuQuanLiNhanVien {
 		this.getQuanLiNhanVien().xuat();
 		System.out.print("Nhập ID nhân viên cần tìm: ");
 		int ID = Integer.parseInt(sc.nextLine());
-		Iterator<NhanVien> i = this.getQuanLiNhanVien().timNhanVienTheoID(ID-1);
+		Iterator<NhanVien> i = this.getQuanLiNhanVien().timNhanVienTheoID(ID);
 		if(i.hasNext()) {
 			NhanVien nhanVien = (NhanVien)i.next();
 			nhanVien.display();

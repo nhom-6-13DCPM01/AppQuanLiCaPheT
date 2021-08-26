@@ -7,7 +7,7 @@ public class Test {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		do {
-			Test.testTaiKhoan();
+			Test.testNhanVien();
 		}while(true);
 	}
 	public static void testTaiKhoan() {

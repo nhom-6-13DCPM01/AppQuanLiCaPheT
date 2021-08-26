@@ -66,10 +66,10 @@ public class MenuQuanLiMon {
 		this.getQuanLiMon().xuat();
 		System.out.print("Nhập ID món cần tìm: ");
 		int ID = Integer.parseInt(sc.nextLine());
-		Iterator<Mon> i = this.getQuanLiMon().timMonTheoID(ID-1);
+		Iterator<Mon> i = this.getQuanLiMon().timMonTheoID(ID);
 		if(i.hasNext()) {
-				Mon mon =(Mon)i.next();
-				mon.display();
+			Mon mon = (Mon)i.next();
+			mon.display();
 		}
 	}
 }

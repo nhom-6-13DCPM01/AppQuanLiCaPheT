@@ -45,11 +45,12 @@ public class QuanLiMon {
 		}
 	}
 	public Iterator<Mon> timMonTheoID(int ID){
+		List<Mon> danhSachTim = new ArrayList<Mon>();
 		for(Iterator<Mon> i = this.quanLiMon.iterator();i.hasNext();) {
 			Mon mon = (Mon)i.next();
-			if(mon.getIdMon() != ID)
-				continue;
-			return i;
+			if(mon.getIdMon() == ID)
+				danhSachTim.add(mon);
+			return danhSachTim.iterator();
 		}
 		return null;
 	}
