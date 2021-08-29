@@ -31,6 +31,6 @@ public class MenuChinh {
 			case 5: new MenuQuanLiHoaDon();break;
 			default: System.out.println("Bye");break;
 			}
-		}while(luaChon != 6);
+		}while(luaChon != 6 && luaChon < 6);
 	}
 }

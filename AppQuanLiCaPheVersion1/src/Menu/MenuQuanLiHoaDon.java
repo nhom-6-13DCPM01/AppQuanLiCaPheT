@@ -39,7 +39,7 @@ public class MenuQuanLiHoaDon {
 			case 4: this.getQuanLiHoaDon().xuat();break;
 			default: System.out.println("Bye");break;
 			}
-		}while(luaChon != 5);
+		}while(luaChon != 5 && luaChon < 5);
 	}
 	public void themHoaDon() {
 		HoaDon hoaDon = new HoaDon();

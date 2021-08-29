@@ -3,13 +3,14 @@ package Object;
 import java.util.Scanner;
 
 public class NhanVien extends Nguoi{
+	//thuộc tính
 	private static int count = 0;
 	Scanner sc = new Scanner(System.in);
 	private int idNhanVien;
 	private String chucVu;
 	private TaiKhoan taiKhoan;
 	
-	
+	//hàm tạo
 	public NhanVien() {
 		this.idNhanVien = ++count;
 	}
@@ -19,12 +20,8 @@ public class NhanVien extends Nguoi{
 		this.chucVu = chucVu;
 		this.taiKhoan = taiKhoan;
 	}
-	public NhanVien(String ten, String diaChi, String email, String ngaySinh, int soDienThoai, String chucVu, int idNhanVien) {
-		super(ten, diaChi, email, ngaySinh, soDienThoai);
-		this.idNhanVien = idNhanVien;
-		this.chucVu = chucVu;
-	}
 	
+	//get set
 	public static int getCount() {
 		return count;
 	}
@@ -34,11 +31,9 @@ public class NhanVien extends Nguoi{
 	public TaiKhoan getTaiKhoan() {
 		return taiKhoan;
 	}
-
 	public void setTaiKhoan(TaiKhoan taiKhoan) {
 		this.taiKhoan = taiKhoan;
 	}
-
 	public int getIdNhanVien() {
 		return idNhanVien;
 	}
@@ -51,13 +46,17 @@ public class NhanVien extends Nguoi{
 	public void setChucVu(String chucVu) {
 		this.chucVu = chucVu;
 	}
+	
+	//phương thức
 	@Override
 	public String toString() {
 		return super.toString()+"NhanVien [idNhanVien=" + idNhanVien + ", chucVu=" + chucVu + "]";
 	}
+	//hiern thị
 	public void display() {
 		System.out.println(this.toString());
 	}
+	//nhập thông tin
 	public void input() {
 		System.out.print("Nhập tên nhân viên: ");
 		this.setTen(sc.nextLine());

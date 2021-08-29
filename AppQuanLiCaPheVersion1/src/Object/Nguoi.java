@@ -4,11 +4,13 @@ import java.text.*;
 import java.util.Date;
 
 public class Nguoi {
+	//thuộc tính
 	private String ten, diaChi, email;
 	private Date ngaySinh;
 	private int soDienThoai;
 	SimpleDateFormat df = new SimpleDateFormat("dd/MM/yyyy");
 	
+	//hàm tạo
 	public Nguoi() {
 		
 	}
@@ -16,14 +18,11 @@ public class Nguoi {
 		this.ten = ten;
 		this.diaChi = diaChi;
 		this.email = email;
-		try {
-			this.ngaySinh = df.parse(ngaySinh);
-		} catch (ParseException e) {
-			e.printStackTrace();
-		}
+		this.setNgaySinh(ngaySinh);
 		this.soDienThoai = soDienThoai;
 	}
 	
+	//get set
 	public String getTen() {
 		return ten;
 	}
@@ -59,6 +58,7 @@ public class Nguoi {
 		this.soDienThoai = soDienThoai;
 	}
 	
+	//phương thức
 	public String toString() {
 		return "Nguoi [ten=" + ten + ", diaChi=" + diaChi + ", email=" + email + ", ngaySinh=" + df.format(ngaySinh)
 				+ ", soDienThoai=" + soDienThoai + "]";

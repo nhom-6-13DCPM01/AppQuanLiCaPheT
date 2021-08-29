@@ -42,7 +42,7 @@ public class MenuQuanLiTaiKhoan {
 			case 5: this.getQuanLiTaiKhoan().xuat();break;
 			default: System.out.println("Bye");break;
 			}
-		}while(luaChon != 6);
+		}while(luaChon != 6 && luaChon < 6);
 	}
 	public void themTaiKhoan() {
 		TaiKhoan taiKhoan = new TaiKhoan();

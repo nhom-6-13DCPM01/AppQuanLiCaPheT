@@ -6,9 +6,11 @@ public class Test {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		boolean allow = true;
 		do {
-			Test.testHoaDon();
-		}while(true);
+			Test.testDangNhap();
+			System.out.println("hello");
+		}while(allow);
 	}
 	public static void testTaiKhoan() {
 		new MenuQuanLiTaiKhoan();
@@ -25,4 +27,8 @@ public class Test {
 	public static void testHoaDon() {
 		new MenuQuanLiHoaDon();
 	}
+	public static void testDangNhap() {
+		new MenuDangNhap();
+	}
+	
 }

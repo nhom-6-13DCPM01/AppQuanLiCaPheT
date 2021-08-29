@@ -3,10 +3,12 @@ package Object;
 import java.util.Scanner;
 
 public class KhachHang extends Nguoi {
+	//thuộc tính
 	private static int count = 0;
 	Scanner sc = new Scanner(System.in);
 	private int idKhachHang, soLanOrder;
 
+	//hàm tạo
 	public KhachHang(){
 		this.idKhachHang = ++count;
 	}
@@ -16,6 +18,7 @@ public class KhachHang extends Nguoi {
 		this.soLanOrder = soLanOrder;
 	}
 	
+	//get set
 	public static int getCount() {
 		return count;
 	}
@@ -38,13 +41,16 @@ public class KhachHang extends Nguoi {
 		this.soLanOrder = soLanOrder;
 	}
 
+	//phương thức
 	@Override
 	public String toString() {
 		return super.toString() + "KhachHang [idKH=" + idKhachHang + ", soLanOder=" + soLanOrder + "]";
 	}
+	//hiển thị
 	public void display() {
 		System.out.println(this.toString());
 	}
+	//nhập thông tin
 	public void input() {
 		System.out.print("Nhập tên khách hàng: ");
 		this.setTen(sc.nextLine());

@@ -41,7 +41,7 @@ public class MenuQuanLiKhachHang {
 			case 5: this.getQuanLiKhachHang().xuat();break;
 			default: System.out.println("Bye");break;
 			}
-		}while(luaChon != 6);
+		}while(luaChon != 6 && luaChon < 6);
 	}
 	public void themKhachHang() {
 		KhachHang khachHang = new KhachHang();

@@ -3,15 +3,16 @@ package Object;
 import java.util.Scanner;
 
 public class TaiKhoan {
+	//thuộc tính
 	private static int count = 0;
 	Scanner sc = new Scanner(System.in);
 	private int idTaiKhoan = 0;
 	private String tenDangNhap,matKhau,quyenHan;
 	
+	//hàm tạo
 	public TaiKhoan() {
 		this.idTaiKhoan = ++count;
 	}
-
 	public TaiKhoan(String tenDangNhap, String matKhau, String quyenHan) {
 		this.idTaiKhoan = ++count;
 		this.tenDangNhap = tenDangNhap;
@@ -19,6 +20,7 @@ public class TaiKhoan {
 		this.quyenHan = quyenHan;
 	}
 	
+	//get set
 	public static int getCount() {
 		return count;
 	}
@@ -55,13 +57,16 @@ public class TaiKhoan {
 		this.quyenHan = quyenHan;
 	}
 
+	//phương thức
 	@Override
 	public String toString() {
 		return "TaiKhoan [idTaiKhoan=" + idTaiKhoan + ", tenDangNhap=" + tenDangNhap + ", matKhau=" + matKhau + ", quyenHan="+ quyenHan + "]";
 	}
+	//hiển thị
 	public void display() {
 		System.out.println(this.toString());
 	}
+	//nhập thông tin
 	public void input() {
 		System.out.print("Nhập tên đăng nhập: ");
 		this.setTenDangNhap(sc.nextLine());

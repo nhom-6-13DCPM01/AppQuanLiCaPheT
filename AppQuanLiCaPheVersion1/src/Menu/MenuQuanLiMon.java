@@ -41,7 +41,7 @@ public class MenuQuanLiMon {
 			case 5: this.getQuanLiMon().xuat();break;
 			default: System.out.println("Bye");break;
 			}
-		}while(luaChon != 6);
+		}while(luaChon != 6 && luaChon < 6);
 	}
 	public void themMon() {
 		Mon mon = new Mon();
