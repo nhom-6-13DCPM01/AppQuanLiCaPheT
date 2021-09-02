@@ -54,12 +54,14 @@ public class MenuQuanLiHoaDon {
 		HoaDon.setCount(hoaDon.getIdHoaDon());
 	}
 	public void xoaHoaDon() {
+		this.getQuanLiHoaDon().xuat();
 		System.out.println("Nhập ID hóa đơn cần xóa: ");
 		int ID = Integer.parseInt(sc.nextLine());
 		this.getQuanLiHoaDon().xoaHoaDonTheoID(ID);
 	}
 	public void timHoaDon() {
-		System.out.println("Nhập ID hóa đơn cần xóa: ");
+		this.getQuanLiHoaDon().xuat();
+		System.out.println("Nhập ID hóa đơn cần tìm: ");
 		int ID = Integer.parseInt(sc.nextLine());
 		Iterator<HoaDon> i = this.getQuanLiHoaDon().timHoaDonTheoID(ID);
 		if(i.hasNext()) {

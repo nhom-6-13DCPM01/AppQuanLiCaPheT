@@ -86,7 +86,7 @@ public class HoaDon {
 	//phương thức
 	@Override
 	public String toString() {
-		return "HoaDon [idHoaDon=" + ", chiTiet=" + chiTiet + ", tongTien=" + tongTien + 
+		return "HoaDon [idHoaDon=" + idHoaDon + ", chiTiet=" + chiTiet + ", tongTien=" + tongTien + 
 				", ngayLapHoaDon=" + ngayLapHoaDon + idHoaDon + "\nkhachHang=" + khachHang.toString() + "\nnhanVien=" + nhanVien.toString() + 
 				"\nmon=" + mon.toString() + "]";
 	}
