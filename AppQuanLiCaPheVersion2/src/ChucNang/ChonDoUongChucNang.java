@@ -31,6 +31,9 @@ public class ChonDoUongChucNang {
 		this.getDanhSachChonDoUong().chonDoUong(chonDoUong);
 		ChonDoUong.setCount(chonDoUong.getID());
 	}
+	public void xoaChonDoUong() {
+		this.getDanhSachChonDoUong().xoaChonDoUong();
+	}
 	public void tongSoTienChonDoUong(ChonDoUong chonDoUong) {
 		Iterator<ChonDoUong> i = this.getDanhSachChonDoUong().layDanhSachChonDoUong();
 		double soTien = 0;
@@ -44,13 +47,10 @@ public class ChonDoUongChucNang {
 		}
 		chonDoUong.setSoTien(soTien);
 	}
-	public void xoaDanhSachDoUong() {
-		this.getDanhSachChonDoUong().xoaDanhSachChonDoUong();
-	}
 	public void xemDanhSachChonDoUong() {
 		Iterator<ChonDoUong> i = this.getDanhSachChonDoUong().layDanhSachChonDoUong();
 		if(i.hasNext()) {
-			System.out.printf("\n%-3s %-35s %-15s %s\n","ID","Đồ uống","Số lượng","Số tiền");
+			System.out.printf("\n%-3s %-35s %-15s %10s %s\n","ID","Đồ uống","Số lượng","Số tiền","ID hóa đơn");
 			for(;i.hasNext();) {
 				ChonDoUong chonDoUong = (ChonDoUong)i.next();
 				chonDoUong.display();

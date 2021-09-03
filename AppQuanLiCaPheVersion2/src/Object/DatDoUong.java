@@ -10,7 +10,8 @@ public class DatDoUong {
 	
 	//Hàm tạo
 	public DatDoUong() {
-		
+		this.setKhachHang(new KhachHang());
+		this.setNhanvien(new NhanVien());
 	}
 	public DatDoUong(KhachHang khachHang, NhanVien nhanVien,int ID) {
 		this.setKhachHang(khachHang);
@@ -33,13 +34,19 @@ public class DatDoUong {
 	
 	//phương thức
 	public void input() {
-		System.out.println("Nhập họ và tên khách hàng: ");
+		System.out.print("Nhập họ và tên khách hàng: ");
 		this.getKhachHang().setTen(sc.nextLine());
-		System.out.println("Nhập họ và tên nhân viên: ");
+		System.out.print("Nhập địa chỉ: ");
+		this.getKhachHang().setDiaChi(sc.nextLine());
+		System.out.print("Nhập số điện thoại: ");
+		this.getKhachHang().setSoDienThoai(sc.nextLine());
+		System.out.print("Nhập họ và tên nhân viên: ");
 		this.getNhanvien().setTen(sc.nextLine());
 	}
 	public void display() {
-		System.out.println("\n"+"Họ và tên khách hàng: "+this.getKhachHang().getTen());
+		System.out.println("\n\n"+"Họ và tên khách hàng: "+this.getKhachHang().getTen());
+		System.out.println("Địa chỉ khách hàng: "+this.getKhachHang().getDiaChi());
+		System.out.println("Số điện thoại khách hàng: "+this.getKhachHang().getSoDienThoai());
 		System.out.println("Họ và tên nhân viên phụ trách: "+this.getNhanvien().getTen()+"\n");
 	}
 }

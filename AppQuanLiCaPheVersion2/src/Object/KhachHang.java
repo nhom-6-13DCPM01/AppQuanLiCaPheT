@@ -12,8 +12,9 @@ public class KhachHang extends Nguoi {
 	public KhachHang(){
 		this.setIdKhachHang(++count);
 	}
-	public KhachHang(int soLanOrder) {
-		this.setSoLanOrder(soLanOrder);
+	public KhachHang(String ten, String diaChi, String email, String ngaySinh, String soDienThoai) {
+		super(ten, diaChi, email, ngaySinh, soDienThoai);
+		this.setIdKhachHang(++count);
 	}
 	public KhachHang(String ten, String diaChi, String email, String ngaySinh, String soDienThoai, int soLanOrder) {
 		super(ten, diaChi, email, ngaySinh, soDienThoai);
@@ -47,7 +48,6 @@ public class KhachHang extends Nguoi {
 	//phương thức
 	//hiển thị
 	public void display() {
-		System.out.printf("\n%-3s %-25s %-50s %-30s %-15s %-15s %s","ID","HỌ VÀ TÊN","ĐỊA CHỈ","EMAIL","NGÀY SINH","SỐ LẦN ORDER");
 		System.out.printf("\n%-3d %-25s %-50s %-30s %-15s %-15s %d\n",this.getIdKhachHang(),this.getTen(),this.getDiaChi(),this.getEmail(),this.getNgaySinh(),this.getSoLanOrder());
 	}
 	//nhập thông tin

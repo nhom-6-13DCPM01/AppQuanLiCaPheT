@@ -65,6 +65,6 @@ public class ChonDoUong {
 		this.setSoLuong(Integer.parseInt(sc.nextLine()));
 	}
 	public void display() {
-		System.out.printf("\n%-3d %-35s %-15d %f",this.getID(),this.getDoUong().getTenDoUong(),this.getSoLuong(),this.getSoTien());
+		System.out.printf("\n%-3d %-35s %-15d %.3f",this.getID(),this.getDoUong().getTenDoUong(),this.getSoLuong(),this.getSoTien());
 	}
 }

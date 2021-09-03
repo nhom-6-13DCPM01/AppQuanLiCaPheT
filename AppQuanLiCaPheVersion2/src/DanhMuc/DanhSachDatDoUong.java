@@ -20,7 +20,15 @@ public class DanhSachDatDoUong {
 	public void datDoUong(DatDoUong datDoUong) {
 		this.getDanhSachDatDoUong().add(datDoUong);
 	}
-	public void suaDanhSachDatDoUong() {
-		
+	public void xoaDatDoUong() {
+		this.getDanhSachDatDoUong().clear();
+	}
+	public Iterator<DatDoUong> layDanhSachDatDoUong(){
+		List<DatDoUong> danhSach = new ArrayList<DatDoUong>();
+		for(Iterator<DatDoUong> i = this.getDanhSachDatDoUong().iterator();i.hasNext();) {
+			DatDoUong datDoUong = (DatDoUong)i.next();
+			danhSach.add(datDoUong);
+		}
+		return danhSach.iterator();
 	}
 }

@@ -31,20 +31,17 @@ public class DanhSachDoUong {
 
 	// xóa món theo id
 	public void xoaDoUongTheoTen(String tenDoUong) {
+		String str = "";
 		for(Iterator<DoUong> i = this.getDanhSachDoUong().iterator();i.hasNext();) {
 			DoUong doUong = (DoUong)i.next();
-			if(doUong.getTenDoUong().equalsIgnoreCase(tenDoUong))
+			if(doUong.getTenDoUong().equalsIgnoreCase(tenDoUong)) {
 				i.remove();
+				str = "";break;
+			}else {
+				str = "Không tìm thấy";
+			}
 		}
-	}
-
-	// cập nhật món theo id
-	public void suaThongTinDoUongTheoTen(String tenDoUong) {
-		for(Iterator<DoUong> i = this.getDanhSachDoUong().iterator();i.hasNext();) {
-			DoUong doUong = (DoUong)i.next();
-			if(doUong.getTenDoUong().equalsIgnoreCase(tenDoUong))
-				doUong.input();
-		}
+		System.out.println(str);
 	}
 
 	// hiển thị danh sách

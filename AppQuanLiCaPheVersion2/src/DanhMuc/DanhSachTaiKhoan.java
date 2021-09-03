@@ -22,19 +22,17 @@ public class DanhSachTaiKhoan {
 		this.getDanhSachTaiKhoan().add(taiKhoan);
 	}
 	public void xoaTaiKhoanTheoTenDangNhap(String tenDangNhap) {
-		for(Iterator<TaiKhoan> i = this.getDanhSachTaiKhoan().iterator();i.hasNext();) {
-			TaiKhoan taiKhoan = (TaiKhoan)i.next();
-			if(taiKhoan.getTenDangNhap().equals(tenDangNhap))
-				i.remove();
-		}
-	}
-	public void suaTaiKhoanTheoTenDangNhap(String tenDangNhap) {
+		String str = "";
 		for(Iterator<TaiKhoan> i = this.getDanhSachTaiKhoan().iterator();i.hasNext();) {
 			TaiKhoan taiKhoan = (TaiKhoan)i.next();
 			if(taiKhoan.getTenDangNhap().equals(tenDangNhap)) {
-					taiKhoan.input();
+				i.remove();
+				str = "";break;
+			}else {
+				str = "Không tìm thấy";
 			}
 		}
+		System.out.println(str);
 	}
 	public Iterator<TaiKhoan> layDanhSachTaiKhoan() {
 		List<TaiKhoan> danhSach = new ArrayList<TaiKhoan>();

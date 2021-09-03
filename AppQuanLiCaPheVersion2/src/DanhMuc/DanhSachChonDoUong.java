@@ -20,10 +20,8 @@ public class DanhSachChonDoUong {
 	public void chonDoUong(ChonDoUong chonDoUong) {
 		this.getDanhSachChonDoUong().add(chonDoUong);
 	}
-	public void xoaDanhSachChonDoUong() {
-		for(Iterator<ChonDoUong> i = this.getDanhSachChonDoUong().iterator();i.hasNext();) {
-			i.remove();
-		}
+	public void xoaChonDoUong() {
+		this.getDanhSachChonDoUong().clear();
 	}
 	public Iterator<ChonDoUong> layDanhSachChonDoUong(){
 		List<ChonDoUong> danhSach = new ArrayList<ChonDoUong>();

@@ -28,22 +28,36 @@ public class TaiKhoanChucNang {
 		TaiKhoan.setCount(taiKhoan.getIdTaiKhoan());
 	}
 	public void xoaTaiKhoan() {
-		System.out.print("Nhập tên đăng nhập: ");
+		System.out.print("Nhập tên đăng nhập cần xóa: ");
 		String tenDangNhap = sc.nextLine();
 		this.getDanhSachTaiKhoan().xoaTaiKhoanTheoTenDangNhap(tenDangNhap);
 	}
 	public void capNhatTaiKhoan() {
-		System.out.print("Nhập tên đăng nhập: ");
+		System.out.print("Nhập tên đăng nhập cần cập nhật: ");
 		String tenDangNhap = sc.nextLine();
-		this.getDanhSachTaiKhoan().suaTaiKhoanTheoTenDangNhap(tenDangNhap);
+		Iterator<TaiKhoan> j = this.getDanhSachTaiKhoan().layDanhSachTaiKhoan();
+		Iterator<TaiKhoan> i = this.getDanhSachTaiKhoan().timTaiKhoanTheoTenDangNhap(tenDangNhap);
+		if(i.hasNext()) {
+			TaiKhoan taiKhoanSoSanh = (TaiKhoan)i.next();
+			for(;j.hasNext();) {
+				TaiKhoan taiKhoan = (TaiKhoan)j.next();
+				if(taiKhoan == taiKhoanSoSanh)
+					taiKhoan.input();
+			}
+		}else {
+			System.out.println("Không tìm thấy");
+		}
 	}
 	public void timTaiKhoan() {
-		System.out.println("Nhập tên đăng nhập");
+		System.out.print("Nhập tên đăng nhập cần tìm: ");
 		String tenDangNhap = sc.nextLine();
 		Iterator<TaiKhoan> i = this.getDanhSachTaiKhoan().timTaiKhoanTheoTenDangNhap(tenDangNhap);
 		if(i.hasNext()) {
 			TaiKhoan taiKhoan = (TaiKhoan)i.next();
+			System.out.printf("\n%-3s %-30s %-30s %s\n","ID","TÊN ĐĂNG NHẬP","MẬT KHẨU","HỌ VÀ TÊN");
 			taiKhoan.display();
+		}else {
+			System.out.println("Không tìm thấy");
 		}
 	}
 	public void xemDanhSachTaiKhoan() {

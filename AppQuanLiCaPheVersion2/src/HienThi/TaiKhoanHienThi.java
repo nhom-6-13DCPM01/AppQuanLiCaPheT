@@ -20,20 +20,24 @@ public class TaiKhoanHienThi {
 	
 	public void menu() {
 		this.getTaiKhoanChucNang().xemDanhSachTaiKhoan();
-		System.out.println("1. Thêm tài khoản");
+		System.out.println("\n1. Thêm tài khoản");
 		System.out.println("2. Xóa tài khoản");
 		System.out.println("3. Cập nhật tài khoản");
 		System.out.println("4. Tìm tài khoản");
+		System.out.println("5. Thoát");
 		System.out.print("Nhập lựa chọn: ");
 	}
 	public void xuLy() {
-		this.menu();
-		int luaChon = Integer.parseInt(sc.nextLine());
-		switch(luaChon) {
-		case 1: this.getTaiKhoanChucNang().themTaiKhoan();break;
-		case 2: this.getTaiKhoanChucNang().xoaTaiKhoan();break;
-		case 3: this.getTaiKhoanChucNang().capNhatTaiKhoan();break;
-		case 4: this.getTaiKhoanChucNang().timTaiKhoan();break;
-		}
+		int luaChon = 0;
+		do {
+			this.menu();
+			luaChon = Integer.parseInt(sc.nextLine());
+			switch(luaChon) {
+			case 1: this.getTaiKhoanChucNang().themTaiKhoan();break;
+			case 2: this.getTaiKhoanChucNang().xoaTaiKhoan();break;
+			case 3: this.getTaiKhoanChucNang().capNhatTaiKhoan();break;
+			case 4: this.getTaiKhoanChucNang().timTaiKhoan();break;
+			}
+		}while(luaChon < 5);
 	}
 }

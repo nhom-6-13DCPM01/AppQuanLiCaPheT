@@ -13,7 +13,7 @@ public class NhanVien extends Nguoi{
 	public NhanVien() {
 		this.setIdNhanVien(++count);
 	}
-	public NhanVien(String ten, String diaChi, String email, String ngaySinh, String soDienThoai, String chucVu, TaiKhoan taiKhoan) {
+	public NhanVien(String ten, String diaChi, String email, String ngaySinh, String soDienThoai, String chucVu) {
 		super(ten, diaChi, email, ngaySinh, soDienThoai);
 		this.setIdNhanVien(++count);
 		this.setChucVu(chucVu);
@@ -42,8 +42,7 @@ public class NhanVien extends Nguoi{
 	//phương thức
 	//hiển thị
 	public void display() {
-		System.out.printf("\n%-3s %-25s %-50s %-30s %-15s %-15s %s","ID","HỌ VÀ TÊN","ĐỊA CHỈ","EMAIL","NGÀY SINH","SỐ ĐIỆN THOẠI","CHỨC VỤ");
-		System.out.printf("\n%-3đ %-25s %-50s %-30s %-15s %-15s %s\n",this.getIdNhanVien(),this.getTen(),this.getDiaChi(),this.getEmail(),this.getNgaySinh(),this.getSoDienThoai(),this.getChucVu());
+		System.out.printf("%-3d %-25s %-50s %-30s %-15s %-15s %s\n",this.getIdNhanVien(),this.getTen(),this.getDiaChi(),this.getEmail(),this.getNgaySinh(),this.getSoDienThoai(),this.getChucVu());
 	}
 	//nhập thông tin
 	public void input() {
