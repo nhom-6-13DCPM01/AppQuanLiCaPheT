@@ -7,12 +7,10 @@ public class BanHangChucNang {
 	Scanner sc = new Scanner(System.in);
 	private DatDoUongChucNang datDoUongChucNang;
 	private ChonDoUongChucNang chonDoUongChucNang;
-	private HoaDonChucNang hoaDonChucNang;
 	
 	public BanHangChucNang() {
 		this.setChonDoUongChucNang(new ChonDoUongChucNang());
 		this.setDatDoUongChucNang(new DatDoUongChucNang());
-		this.setHoaDonChucNang(new HoaDonChucNang());
 	}
 
 	public DatDoUongChucNang getDatDoUongChucNang() {
@@ -26,12 +24,6 @@ public class BanHangChucNang {
 	}
 	public void setChonDoUongChucNang(ChonDoUongChucNang chonDoUongChucNang) {
 		this.chonDoUongChucNang = chonDoUongChucNang;
-	}
-	public HoaDonChucNang getHoaDonChucNang() {
-		return hoaDonChucNang;
-	}
-	public void setHoaDonChucNang(HoaDonChucNang hoaDonChucNang) {
-		this.hoaDonChucNang = hoaDonChucNang;
 	}
 	
 	public void chonDoUong() {

@@ -24,6 +24,7 @@ public class KhachHangHienThi {
 		System.out.println("2. Xóa khách hàng");
 		System.out.println("3. Cập nhật khách hàng");
 		System.out.println("4. Tìm khách hàng");
+		System.out.println("5. Thoát");
 		System.out.print("Nhập lựa chọn: ");
 	}
 	public void xuLy() {

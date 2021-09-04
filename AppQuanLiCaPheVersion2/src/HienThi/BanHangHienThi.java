@@ -1,3 +1,4 @@
+
 package HienThi;
 
 import java.util.Scanner;
@@ -21,6 +22,7 @@ public class BanHangHienThi {
 	public void menu() {
 		System.out.println("\n1. Chọn đồ uống");
 		System.out.println("2. Đặt đồ uống");
+		System.out.println("3. Thoát");
 		System.out.print("Nhập lựa chọn: ");
 	}
 	public void xuLy() {
@@ -32,6 +34,6 @@ public class BanHangHienThi {
 			case 1: this.getBanHangChucNang().chonDoUong();break;
 			case 2: this.getBanHangChucNang().datDoUong();break;
 			}
-		}while(luaChon < 4);
+		}while(luaChon < 3);
 	}
 }

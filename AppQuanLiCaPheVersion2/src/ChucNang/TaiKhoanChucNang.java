@@ -82,16 +82,4 @@ public class TaiKhoanChucNang {
 		}
 		return false;
 	}
-	public boolean kiemTraDangNhap(String tenDangNhap, String matKhau) {
-		Iterator<TaiKhoan> i = this.getDanhSachTaiKhoan().layDanhSachTaiKhoan();
-		for(;i.hasNext();) {
-			TaiKhoan taiKhoan = (TaiKhoan)i.next();
-			if(taiKhoan.getTenDangNhap().equals(tenDangNhap))
-				continue;
-			if(taiKhoan.getMatKhau().equals(matKhau))
-				continue;
-			return true;
-		}
-		return false;
-	}
 }

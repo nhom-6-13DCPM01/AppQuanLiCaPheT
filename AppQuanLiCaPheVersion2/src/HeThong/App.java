@@ -1,10 +1,8 @@
-package Test;
+package HeThong;
 
-import java.util.Scanner;
-import HienThi.*;
+import HienThi.DangNhapHienThi;
 
-public class Test {
-	static Scanner sc = new Scanner(System.in);
+public class App {
 	public static void main(String[] args) {
 		DangNhapHienThi dangNhapHienThi = new DangNhapHienThi();
 		dangNhapHienThi.xuLy();
