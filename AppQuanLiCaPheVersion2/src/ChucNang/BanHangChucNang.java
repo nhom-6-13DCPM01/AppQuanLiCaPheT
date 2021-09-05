@@ -33,7 +33,7 @@ public class BanHangChucNang {
 			nhapTiep = false;
 			this.getChonDoUongChucNang().chonDoUong(chonDoUong);
 			this.getChonDoUongChucNang().tongSoTienChonDoUong(chonDoUong);
-			System.out.println("Chọn đồ uống tiếp không? (Y/N)");
+			System.out.println("Tiếp tục chọn đồ uống không? (Y/N)");
 			String str = sc.nextLine();
 			if(str.equalsIgnoreCase("Y"))
 				nhapTiep = true;

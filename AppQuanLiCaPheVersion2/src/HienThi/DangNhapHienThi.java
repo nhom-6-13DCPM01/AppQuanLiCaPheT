@@ -44,10 +44,14 @@ public class DangNhapHienThi {
 		String tenDangNhap = sc.nextLine();
 		System.out.print("Mật khẩu: ");
 		String matKhau = sc.nextLine();
-		if(this.getDangNhapChucNang().phanQuyen(this.getDangNhapChucNang().kiemTraDangNhap(tenDangNhap, matKhau)).equalsIgnoreCase("Quản lí")) {
-			this.getQuanLiHienThi().xuLy();
+		if(this.getDangNhapChucNang().kiemTraDangNhap(tenDangNhap, matKhau) == null) {
+			System.out.println("sai mật khẩu hoặc tên đăng nhập");
 		}else {
-			this.getBanHangHienThi().xuLy();
+			if(this.getDangNhapChucNang().phanQuyen(this.getDangNhapChucNang().kiemTraDangNhap(tenDangNhap, matKhau)).equalsIgnoreCase("Quản lí")) {
+				this.getQuanLiHienThi().xuLy();
+			}else {
+				this.getBanHangHienThi().xuLy();
+			}
 		}
 	}
 	public void xuLy() {

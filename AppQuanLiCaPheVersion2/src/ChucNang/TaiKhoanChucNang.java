@@ -42,7 +42,9 @@ public class TaiKhoanChucNang {
 			for(;j.hasNext();) {
 				TaiKhoan taiKhoan = (TaiKhoan)j.next();
 				if(taiKhoan == taiKhoanSoSanh)
-					taiKhoan.input();
+					do {
+						taiKhoan.input();
+					} while (this.kiemTraTrung(taiKhoan.getTenDangNhap(), taiKhoan.getMatKhau()));
 			}
 		}else {
 			System.out.println("Không tìm thấy");
