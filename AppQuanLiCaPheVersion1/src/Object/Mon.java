@@ -3,14 +3,12 @@ package Object;
 import java.util.Scanner;
 
 public class Mon {
-	//thuộc tính
 	private static int count = 0;
 	Scanner sc = new Scanner(System.in);
 	private int idMon;
 	private String tenMon;
 	private Double giaTien;
 	
-	//hàm tạo
 	public Mon() {
 		this.idMon = ++count;
 	}
@@ -20,7 +18,6 @@ public class Mon {
 		this.giaTien = giaTien;
 	}
 	
-	//get set
 	public static int getCount() {
 		return count;
 	}
@@ -46,15 +43,16 @@ public class Mon {
 		this.giaTien = giaTien;
 	}
 	
-	//phương thức
 	@Override
 	public String toString() {
 		return "Mon [idMon=" + idMon + ", tenMon=" + tenMon + ", giaTien=" + giaTien + "]";
 	}
+	
 	//hiển thị
 	public void display() {
 		System.out.println(this.toString());
 	}
+	
 	//nhập thông tin
 	public void input() {
 		System.out.print("Nhập tên món: ");

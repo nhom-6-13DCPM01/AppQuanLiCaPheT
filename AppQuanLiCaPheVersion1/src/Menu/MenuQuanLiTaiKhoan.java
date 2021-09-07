@@ -8,6 +8,7 @@ public class MenuQuanLiTaiKhoan {
 	private QuanLiTaiKhoan quanLiTaiKhoan = new QuanLiTaiKhoan();
 	static Scanner sc = new Scanner(System.in);
 	
+	//hàm tạo có hàm xử lý để khi dùng chỉ cần tạo đối tượng là chạy
 	public MenuQuanLiTaiKhoan() {
 		this.xuLy();
 	}
@@ -15,7 +16,6 @@ public class MenuQuanLiTaiKhoan {
 	public QuanLiTaiKhoan getQuanLiTaiKhoan() {
 		return quanLiTaiKhoan;
 	}
-
 	public void setQuanLiTaiKhoan(QuanLiTaiKhoan quanLiTaiKhoan) {
 		this.quanLiTaiKhoan = quanLiTaiKhoan;
 	}
@@ -29,6 +29,8 @@ public class MenuQuanLiTaiKhoan {
 		System.out.println("6. Thoát");
 		System.out.print("Nhập lựa chọn: ");
 	}
+	
+	//Xử lý các lựa chọn của người dùng và có menu ở trong
 	public void xuLy() {
 		int luaChon = 0;
 		do {
@@ -44,24 +46,28 @@ public class MenuQuanLiTaiKhoan {
 			}
 		}while(luaChon != 6 && luaChon < 6);
 	}
+	
 	public void themTaiKhoan() {
 		TaiKhoan taiKhoan = new TaiKhoan();
 		taiKhoan.input();
 		this.quanLiTaiKhoan.themTaiKhoan(taiKhoan);
 		TaiKhoan.setCount(taiKhoan.getIdTaiKhoan());
 	}
+	
 	public void xoaTaiKhoan() {
 		this.getQuanLiTaiKhoan().xuat();
 		System.out.print("Nhập ID tài khoản cần xóa: ");
 		int ID = Integer.parseInt(sc.nextLine());
 		this.getQuanLiTaiKhoan().xoaTaiKhoanTheoID(ID);
 	}
+	
 	public void capNhatTaiKhoan() {
 		this.getQuanLiTaiKhoan().xuat();
 		System.out.print("Nhập ID tài khoản cần sủa: ");
 		int ID = Integer.parseInt(sc.nextLine());
 		this.getQuanLiTaiKhoan().suaThongTinTaiKhoanTheoID(ID);
 	}
+	
 	public void timTaiKhoan() {
 		this.getQuanLiTaiKhoan().xuat();
 		System.out.print("Nhập ID tài khoản cần tìm: ");

@@ -3,14 +3,12 @@ package Object;
 import java.util.Scanner;
 
 public class NhanVien extends Nguoi{
-	//thuộc tính
 	private static int count = 0;
 	Scanner sc = new Scanner(System.in);
 	private int idNhanVien;
 	private String chucVu;
 	private TaiKhoan taiKhoan;
 	
-	//hàm tạo
 	public NhanVien() {
 		this.idNhanVien = ++count;
 	}
@@ -21,7 +19,6 @@ public class NhanVien extends Nguoi{
 		this.taiKhoan = taiKhoan;
 	}
 	
-	//get set
 	public static int getCount() {
 		return count;
 	}
@@ -47,15 +44,16 @@ public class NhanVien extends Nguoi{
 		this.chucVu = chucVu;
 	}
 	
-	//phương thức
 	@Override
 	public String toString() {
 		return super.toString()+"NhanVien [idNhanVien=" + idNhanVien + ", chucVu=" + chucVu + "]";
 	}
-	//hiern thị
+	
+	//hiển thị
 	public void display() {
 		System.out.println(this.toString());
 	}
+	
 	//nhập thông tin
 	public void input() {
 		System.out.print("Nhập tên nhân viên: ");

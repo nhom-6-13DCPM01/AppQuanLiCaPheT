@@ -8,6 +8,7 @@ public class MenuQuanLiHoaDon {
 	private QuanLiHoaDon quanLiHoaDon = new QuanLiHoaDon();
 	Scanner sc = new Scanner(System.in);
 	
+	//Hàm tạo có hàm xử lý để khi dùng chỉ cần tạo đối tượng là chạy
 	public MenuQuanLiHoaDon() {
 		this.xuLy();
 	}
@@ -27,6 +28,8 @@ public class MenuQuanLiHoaDon {
 		System.out.println("5. thoát");
 		System.out.print("Nhập lụa chọn: ");
 	}
+	
+	//Xử lý các lựa chọn của người dùng và có menu ở trong
 	public void xuLy() {
 		int luaChon = 0;
 		do {

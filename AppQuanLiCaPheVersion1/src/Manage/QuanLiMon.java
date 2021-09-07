@@ -4,15 +4,12 @@ import java.util.*;
 import Object.*;
 
 public class QuanLiMon {
-	//thuộc tính
 	private List<Mon> quanLiMon;
 	
-	//hàm tạo
 	public QuanLiMon() {
 		this.setQuanLiMon(new ArrayList<Mon>());
 	}
 
-	//get set
 	public List<Mon> getQuanLiMon() {
 		return quanLiMon;
 	}
@@ -20,11 +17,10 @@ public class QuanLiMon {
 		this.quanLiMon = quanLiMon;
 	}
 	
-	//phương thức
-	//thêm món có tham chiếu là một món
 	public void themMon(Mon mon) {
 		this.getQuanLiMon().add(mon);
 	}
+	
 	//xóa món theo id
 	public void xoaMonTheoID(int ID) {
 		for(Iterator<Mon> i = this.getQuanLiMon().iterator();i.hasNext();) {
@@ -34,6 +30,7 @@ public class QuanLiMon {
 			}
 		}
 	}
+	
 	//cập nhật món theo id
 	public void suaThongTinMonTheoID(int ID) {
 		for(Iterator<Mon> i = this.quanLiMon.iterator();i.hasNext();) {
@@ -44,6 +41,7 @@ public class QuanLiMon {
 			}
 		}
 	}
+	
 	//hiển thị danh sách
 	public void xuat() {
 		for(Iterator<Mon> i = this.getQuanLiMon().iterator();i.hasNext();) {
@@ -51,7 +49,8 @@ public class QuanLiMon {
 			mon.display();
 		}
 	}
-	//tìm món theo id có kiểu trả về là mộ iterator
+	
+	//tìm món theo id có kiểu trả về là một iterator
 	public Iterator<Mon> timMonTheoID(int ID){
 		List<Mon> danhSachTim = new ArrayList<Mon>();
 		for(Iterator<Mon> i = this.quanLiMon.iterator();i.hasNext();) {

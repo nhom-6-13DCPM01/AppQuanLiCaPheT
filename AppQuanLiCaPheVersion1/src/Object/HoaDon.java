@@ -4,7 +4,6 @@ import java.text.SimpleDateFormat;
 import java.util.*;
 
 public class HoaDon {
-	//thuộc tính
 	private static int count = 0;
 	Scanner sc = new Scanner(System.in);
 	private int idHoaDon;
@@ -16,7 +15,6 @@ public class HoaDon {
 	private Date ngayLapHoaDon;
 	SimpleDateFormat df = new SimpleDateFormat("dd/MM/yyyy hh:mm:ss");
 	
-	//hàm tạo
 	public HoaDon() {
 		this.idHoaDon = ++count;
 		this.setNgayLapHoaDon();
@@ -31,14 +29,12 @@ public class HoaDon {
 		this.tongTien = tongTien;
 	}
 
-	//get set
 	public static int getCount() {
 		return count;
 	}
 	public static void setCount(int count) {
 		HoaDon.count = count;
 	}
-	
 	public Date getNgayLapHoaDon() {
 		return ngayLapHoaDon;
 	}
@@ -83,17 +79,18 @@ public class HoaDon {
 		this.tongTien = tongTien;
 	}
 	
-	//phương thức
 	@Override
 	public String toString() {
 		return "HoaDon [idHoaDon=" + idHoaDon + ", chiTiet=" + chiTiet + ", tongTien=" + tongTien + 
 				", ngayLapHoaDon=" + ngayLapHoaDon + idHoaDon + "\nkhachHang=" + khachHang.toString() + "\nnhanVien=" + nhanVien.toString() + 
 				"\nmon=" + mon.toString() + "]";
 	}
+	
 	//hiển thị
 	public void display() {
 		System.out.println(this.toString());
 	}
+	
 	//nhập thông tin
 	public void input(KhachHang khachHang, NhanVien nhanVien, Mon mon) {
 		this.setKhachHang(khachHang);
