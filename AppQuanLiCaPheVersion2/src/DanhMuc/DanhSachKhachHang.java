@@ -21,6 +21,8 @@ public class DanhSachKhachHang {
 	public void themKhachHang(KhachHang khachHang) {
 		this.getDanhSachKhachHang().add(khachHang);
 	}
+	
+	// xóa khách hàng theo tên nhưng để tránh trùng tên nên yêu cầu thêm ngày sinh
 	public void xoaKhachHang(String ten, String ngaySinh) {
 		String str = "";
 		for(Iterator<KhachHang> i = this.getDanhSachKhachHang().iterator();i.hasNext();) {
@@ -36,19 +38,23 @@ public class DanhSachKhachHang {
 		}
 		System.out.println(str);
 	}
+	
+	// tìm khách hàng theo tên nhưng để tránh trùng tên nên yêu cầu thêm ngày sinh
 	public Iterator<KhachHang> timKhachHang(String ten, String ngaySinh) {
 		List<KhachHang> danhSachTim = new ArrayList<KhachHang>();
 		for(Iterator<KhachHang> i = this.getDanhSachKhachHang().iterator();i.hasNext();) {
 			KhachHang khachHang = (KhachHang)i.next();
-			if(khachHang.getTen().equalsIgnoreCase(ten))
+			if(!khachHang.getTen().equalsIgnoreCase(ten))
 				continue;
-			if(khachHang.getNgaySinh().equals(ngaySinh))
+			if(!khachHang.getNgaySinh().equals(ngaySinh))
 				continue;
 			danhSachTim.add(khachHang);
 			return danhSachTim.iterator();
 		}
 		return null;
 	}
+	
+	//lấy danh sách ra có kiểu trả về là iterator
 	public Iterator<KhachHang> layDanhSachKhachHang() {
 		List<KhachHang> danhSach = new ArrayList<KhachHang>();
 		for(Iterator<KhachHang> i = this.getDanhSachKhachHang().iterator();i.hasNext();) {
@@ -57,6 +63,8 @@ public class DanhSachKhachHang {
 		}
 		return danhSach.iterator();
 	}
+	
+	//Khởi tạo khách hàng
 	public void khoiTaoKhachHang() {
 		KhachHang thinh = new KhachHang("Trương Văn Tiến Thịnh", "122 Âm Binh, Phường Cô hồn, Quận Các Đảng", "thinh@gmail.com", "23/05/2001", "123456789");
 		this.themKhachHang(thinh);

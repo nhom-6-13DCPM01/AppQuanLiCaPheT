@@ -23,9 +23,13 @@ public class DatDoUongChucNang {
 		datDoUong.input();
 		this.getDanhSachDatDoUong().datDoUong(datDoUong);
 	}
+	
+	//Xóa hết danh sách đặt
 	public void xoaDatDoUong() {
 		this.getDanhSachDatDoUong().xoaDatDoUong();
 	}
+	
+	//Hiển thị danh sách đặt đồ uống
 	public void hienThiDatDoUong() {
 		Iterator<DatDoUong> i = this.getDanhSachDatDoUong().layDanhSachDatDoUong();
 		if(i.hasNext()) {

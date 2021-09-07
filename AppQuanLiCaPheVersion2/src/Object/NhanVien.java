@@ -3,13 +3,11 @@ package Object;
 import java.util.Scanner;
 
 public class NhanVien extends Nguoi{
-	//thuộc tính
 	private static int count = 0;
 	Scanner sc = new Scanner(System.in);
 	private int idNhanVien;
 	private String chucVu;
 	
-	//hàm tạo
 	public NhanVien() {
 		this.setIdNhanVien(++count);
 	}
@@ -19,7 +17,6 @@ public class NhanVien extends Nguoi{
 		this.setChucVu(chucVu);
 	}
 	
-	//get set
 	public static int getCount() {
 		return count;
 	}
@@ -39,11 +36,11 @@ public class NhanVien extends Nguoi{
 		this.chucVu = chucVu;
 	}
 	
-	//phương thức
 	//hiển thị
 	public void display() {
 		System.out.printf("%-3d %-25s %-50s %-30s %-15s %-15s %s\n",this.getIdNhanVien(),this.getTen(),this.getDiaChi(),this.getEmail(),this.getNgaySinh(),this.getSoDienThoai(),this.getChucVu());
 	}
+	
 	//nhập thông tin
 	public void input() {
 		System.out.print("Nhập họ và tên: ");

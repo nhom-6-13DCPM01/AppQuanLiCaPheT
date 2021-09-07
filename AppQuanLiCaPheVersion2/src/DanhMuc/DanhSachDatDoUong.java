@@ -17,12 +17,17 @@ public class DanhSachDatDoUong {
 		this.danhSachDatDoUong = danhSachDatDoUong;
 	}
 	
+	//Thêm một lần đặt vào danh sách
 	public void datDoUong(DatDoUong datDoUong) {
 		this.getDanhSachDatDoUong().add(datDoUong);
 	}
+	
+	//xóa danh sách đặt
 	public void xoaDatDoUong() {
 		this.getDanhSachDatDoUong().clear();
 	}
+	
+	//lấy danh sách ra có kiểu trả về là iterator
 	public Iterator<DatDoUong> layDanhSachDatDoUong(){
 		List<DatDoUong> danhSach = new ArrayList<DatDoUong>();
 		for(Iterator<DatDoUong> i = this.getDanhSachDatDoUong().iterator();i.hasNext();) {

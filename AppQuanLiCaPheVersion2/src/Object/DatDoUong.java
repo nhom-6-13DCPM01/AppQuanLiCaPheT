@@ -3,12 +3,10 @@ package Object;
 import java.util.Scanner;
 
 public class DatDoUong {
-	//thuộc tính
 	private NhanVien nhanvien;
 	private KhachHang khachHang;
 	Scanner sc = new Scanner(System.in);
 	
-	//Hàm tạo
 	public DatDoUong() {
 		this.setKhachHang(new KhachHang());
 		this.setNhanvien(new NhanVien());
@@ -18,7 +16,6 @@ public class DatDoUong {
 		this.setNhanvien(nhanVien);
 	}
 	
-	//get set
 	public NhanVien getNhanvien() {
 		return nhanvien;
 	}
@@ -32,7 +29,7 @@ public class DatDoUong {
 		this.khachHang = khachHang;
 	}
 	
-	//phương thức
+	//nhập thông tin
 	public void input() {
 		System.out.print("Nhập họ và tên khách hàng: ");
 		this.getKhachHang().setTen(sc.nextLine());
@@ -43,6 +40,8 @@ public class DatDoUong {
 		System.out.print("Nhập họ và tên nhân viên: ");
 		this.getNhanvien().setTen(sc.nextLine());
 	}
+	
+	//hiển thị
 	public void display() {
 		System.out.println("\n\n"+"Họ và tên khách hàng: "+this.getKhachHang().getTen());
 		System.out.println("Địa chỉ khách hàng: "+this.getKhachHang().getDiaChi());

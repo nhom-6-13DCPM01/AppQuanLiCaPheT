@@ -5,16 +5,13 @@ import Object.DoUong;
 import Object.LoaiDoUong;
 
 public class DanhSachDoUong {
-	// thuộc tính
 	private List<DoUong> danhSachDoUong;
 
-	// hàm tạo
 	public DanhSachDoUong() {
 		this.setDanhSachDoUong(new ArrayList<DoUong>());
 		this.khoiTaoDoUong();
 	}
 
-	// get set
 	public List<DoUong> getDanhSachDoUong() {
 		return danhSachDoUong;
 	}
@@ -23,13 +20,11 @@ public class DanhSachDoUong {
 		this.danhSachDoUong = danhSachDoUong;
 	}
 
-	// phương thức
-	// thêm món có tham chiếu là một món
 	public void themDoUong(DoUong doUong) {
 		this.getDanhSachDoUong().add(doUong);
 	}
 
-	// xóa món theo id
+	// xóa đồ uống theo tên
 	public void xoaDoUongTheoTen(String tenDoUong) {
 		String str = "";
 		for(Iterator<DoUong> i = this.getDanhSachDoUong().iterator();i.hasNext();) {
@@ -44,7 +39,7 @@ public class DanhSachDoUong {
 		System.out.println(str);
 	}
 
-	// hiển thị danh sách
+	//lấy danh sách ra có kiểu trả về là iterator
 	public Iterator<DoUong> layDanhSachDoUong() {
 		List<DoUong> danhSach = new ArrayList<DoUong>();
 		for (Iterator<DoUong> i = this.getDanhSachDoUong().iterator(); i.hasNext();) {
@@ -54,7 +49,7 @@ public class DanhSachDoUong {
 		return danhSach.iterator();
 	}
 
-	// tìm món theo id có kiểu trả về là mộ iterator
+	// tìm đồ uống theo tên có kiểu trả về là một iterator
 	public Iterator<DoUong> timDoUongTheoTen(String tenDoUong) {
 		List<DoUong> danhSachTim = new ArrayList<DoUong>();
 		for (Iterator<DoUong> i = this.getDanhSachDoUong().iterator(); i.hasNext();) {
@@ -66,6 +61,8 @@ public class DanhSachDoUong {
 		}
 		return null;
 	}
+	
+	//Khởi tạo đồ uống
 	public void khoiTaoDoUong() {
 		DoUong bacXiu = new DoUong("Bạc xỉu", 23.000, LoaiDoUong.CÀPHÊ);
 		this.themDoUong(bacXiu);

@@ -28,6 +28,7 @@ public class DangNhapChucNang {
 		this.danhSachNhanVien = danhSachNhanVien;
 	}
 	
+	//kiểm tra xem đăng nhập hợp lệ hay không có kiểu trả về là một tài khoản
 	public TaiKhoan kiemTraDangNhap(String tenDangNhap, String matKhau) {
 		Iterator<TaiKhoan> i = this.getDanhSachTaiKhoan().layDanhSachTaiKhoan();
 		for(;i.hasNext();) {
@@ -40,6 +41,8 @@ public class DangNhapChucNang {
 		}
 		return null;
 	}
+	
+	//Phân quyền khi kiểm tra đăng nhập hợp lệ dựa trên chức vụ nhân viên
 	public String phanQuyen(TaiKhoan taiKhoan) {
 		Iterator<NhanVien> i = this.getDanhSachNhanVien().layDanhSachNhanVien();
 		for(;i.hasNext();) {

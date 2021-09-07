@@ -32,6 +32,8 @@ public class NhanVienChucNang {
 		String ngaySinh = sc.nextLine();
 		this.getDanhSachNhanVien().xoaNhanVien(ten, ngaySinh);
 	}
+	
+	//Cập nhật nhân viên bằng cách tìm và thay đổi trong danh sách đã lấy ra
 	public void capNhatNhanVien() {
 		System.out.print("Nhập tên nhân viên cần cập nhật: ");
 		String ten = sc.nextLine();
@@ -62,6 +64,8 @@ public class NhanVienChucNang {
 			nhanVien.display();
 		}
 	}
+	
+	//Hiển thị danh sách đã lấy ra
 	public void xemDanhSachNhanVien() {
 		Iterator<NhanVien> i = this.getDanhSachNhanVien().layDanhSachNhanVien();
 		if(i.hasNext()) {

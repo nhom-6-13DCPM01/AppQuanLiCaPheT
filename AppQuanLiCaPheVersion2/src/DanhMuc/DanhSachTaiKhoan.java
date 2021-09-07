@@ -4,7 +4,7 @@ import java.util.*;
 import Object.TaiKhoan;
 
 public class DanhSachTaiKhoan {
-	private List<TaiKhoan> danhSachTaiKhoan = new ArrayList<TaiKhoan>();
+	private List<TaiKhoan> danhSachTaiKhoan;
 	
 	public DanhSachTaiKhoan() {
 		this.setDanhSachTaiKhoan(new ArrayList<TaiKhoan>());
@@ -21,6 +21,8 @@ public class DanhSachTaiKhoan {
 	public void themTaiKhoan(TaiKhoan taiKhoan) {
 		this.getDanhSachTaiKhoan().add(taiKhoan);
 	}
+	
+	//Xóa tài khoản theo tên đăng nhập
 	public void xoaTaiKhoanTheoTenDangNhap(String tenDangNhap) {
 		String str = "";
 		for(Iterator<TaiKhoan> i = this.getDanhSachTaiKhoan().iterator();i.hasNext();) {
@@ -34,6 +36,8 @@ public class DanhSachTaiKhoan {
 		}
 		System.out.println(str);
 	}
+	
+	//lấy danh sách ra có kiểu trả về là iterator
 	public Iterator<TaiKhoan> layDanhSachTaiKhoan() {
 		List<TaiKhoan> danhSach = new ArrayList<TaiKhoan>();
 		for(Iterator<TaiKhoan> i = this.getDanhSachTaiKhoan().iterator();i.hasNext();) {
@@ -42,6 +46,8 @@ public class DanhSachTaiKhoan {
 		}
 		return danhSach.iterator();
 	}
+	
+	//Tìm tài khoản theo tên đăng nhập có kiểu trả về là iterator
 	public Iterator<TaiKhoan> timTaiKhoanTheoTenDangNhap(String tenDangNhap) {
 		List<TaiKhoan> danhSachTim = new ArrayList<TaiKhoan>();
 		for(Iterator<TaiKhoan> i = this.getDanhSachTaiKhoan().iterator();i.hasNext();) {
@@ -53,6 +59,8 @@ public class DanhSachTaiKhoan {
 		}
 		return null;
 	}
+	
+	//Khởi tạo các tài khoản 
 	public void khoiTaoTaiKhoan() {
 		TaiKhoan taiKhoanThinh = new TaiKhoan("TruongVanTienThinh", "TVTT", "Trương Văn Tiến Thịnh");
 		this.themTaiKhoan(taiKhoanThinh);

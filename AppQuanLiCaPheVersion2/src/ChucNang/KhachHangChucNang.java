@@ -32,6 +32,8 @@ public class KhachHangChucNang {
 		String ngaySinh = sc.nextLine();
 		this.getDanhSachKhachHang().xoaKhachHang(ten, ngaySinh);
 	}
+	
+	//Cập nhật khách hàng bằng cách tìm và thay đổi trong danh sách đã lấy ra
 	public void capNhatKhachHang() {
 		System.out.print("Nhập tên khách hàng cần cập nhật: ");
 		String ten = sc.nextLine();
@@ -44,7 +46,7 @@ public class KhachHangChucNang {
 			for(;j.hasNext();) {
 				KhachHang khachHang = (KhachHang)j.next();
 				if(khachHang == khachHangSoSanh)
-					khachHang.input();
+						khachHang.input();
 			}
 		}else {
 			System.out.println("Không tìm thấy");
@@ -58,16 +60,18 @@ public class KhachHangChucNang {
 		Iterator<KhachHang> i = this.getDanhSachKhachHang().timKhachHang(ten, ngaySinh);
 		if(i.hasNext()) {
 			KhachHang khachHang = (KhachHang)i.next();
-			System.out.printf("\n%-3s %-25s %-50s %-30s %-15s %-15s %s\n","ID","HỌ VÀ TÊN","ĐỊA CHỈ","EMAIL","NGÀY SINH","SỐ LẦN ORDER");
+			System.out.printf("\n%-3s %-25s %-50s %-30s %s\n","ID","HỌ VÀ TÊN","ĐỊA CHỈ","EMAIL","NGÀY SINH");
 			khachHang.display();
 		}else {
 			System.out.println("Không tìm thấy");
 		}
 	}
+	
+	//Hiển thị danh sách đã lấy ra
 	public void xemDanhSachKhachHang() {
 		Iterator<KhachHang> i = this.getDanhSachKhachHang().layDanhSachKhachHang();
 		if(i.hasNext()) {
-			System.out.printf("\n%-3s %-25s %-50s %-30s %-15s %-15s %s\n","ID","HỌ VÀ TÊN","ĐỊA CHỈ","EMAIL","NGÀY SINH","SỐ LẦN ORDER");
+			System.out.printf("\n%-3s %-25s %-50s %-30s %s\n","ID","HỌ VÀ TÊN","ĐỊA CHỈ","EMAIL","NGÀY SINH");
 			for(;i.hasNext();) {
 				KhachHang khachHang = (KhachHang)i.next();
 				khachHang.display();

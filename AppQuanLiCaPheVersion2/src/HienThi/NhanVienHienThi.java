@@ -27,6 +27,8 @@ public class NhanVienHienThi {
 		System.out.println("5. Thoát");
 		System.out.print("Nhập lựa chọn: ");
 	}
+	
+	//Xử lý các lựa chọn của người dùng và có menu ở trong
 	public void xuLy() {
 		int luaChon = 0;
 		do {

@@ -4,13 +4,11 @@ import java.text.*;
 import java.util.Date;
 
 public class Nguoi {
-	//thuộc tính
 	private String ten, diaChi, email;
 	private Date ngaySinh;
 	private String soDienThoai;
 	SimpleDateFormat df = new SimpleDateFormat("dd/MM/yyyy");
 	
-	//hàm tạo
 	public Nguoi() {
 		
 	}
@@ -22,7 +20,6 @@ public class Nguoi {
 		this.setSoDienThoai(soDienThoai);
 	}
 	
-	//get set
 	public String getTen() {
 		return this.ten;
 	}

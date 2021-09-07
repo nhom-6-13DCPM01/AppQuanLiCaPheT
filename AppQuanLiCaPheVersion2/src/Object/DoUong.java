@@ -3,7 +3,6 @@ package Object;
 import java.util.Scanner;
 
 public class DoUong {
-	//thuộc tính
 	private static int count = 0;
 	Scanner sc = new Scanner(System.in);
 	private int idDoUong;
@@ -11,7 +10,6 @@ public class DoUong {
 	private LoaiDoUong loaiDoUong;
 	private Double giaTien;
 	
-	//hàm tạo
 	public DoUong() {
 		this.setIdDoUong(++count);
 	}
@@ -26,7 +24,6 @@ public class DoUong {
 		this.setLoaiMon(loaiDoUong);
 	}
 	
-	//get set
 	public static int getCount() {
 		return count;
 	}
@@ -58,11 +55,11 @@ public class DoUong {
 		this.loaiDoUong = loaiDoUong;
 	}
 	
-	//phương thức
 	//hiển thị
 	public void display() {
 		System.out.printf("\n%-3d %-30s %-15s %.3f\n", this.getIdDoUong(),this.getTenDoUong(),this.getLoaiDoUong(),this.getGiaTien());
 	}
+	
 	//nhập thông tin
 	public void input() {
 		System.out.print("Nhập tên món: ");

@@ -26,6 +26,7 @@ public class BanHangChucNang {
 		this.chonDoUongChucNang = chonDoUongChucNang;
 	}
 	
+	//Chọn đồ uống và tự động tính số tiền
 	public void chonDoUong() {
 		boolean nhapTiep = false;
 		do {
@@ -41,16 +42,22 @@ public class BanHangChucNang {
 		ChonDoUong.setCount(0);
 		this.hienThiHoaDonChonDoUong();
 	}
+	
+	//đặt đồ uống và có chọn đồ uống
 	public void datDoUong() {
 		this.getDatDoUongChucNang().datDoUong();
 		System.out.println("\nChọn đồ uống\n");
 		this.chonDoUong();
 		this.hienThiHoaDonDatDoUong();
 	}
+	
+	//Hiển thị danh sách đồ uống đã chọn và xóa
 	public void hienThiHoaDonChonDoUong() {
 		this.getChonDoUongChucNang().xemDanhSachChonDoUong();
 		this.getChonDoUongChucNang().xoaChonDoUong();
 	}
+	
+	//Hiển thị danh sách đã đặt vào xóa
 	public void hienThiHoaDonDatDoUong() {
 		this.getDatDoUongChucNang().hienThiDatDoUong();
 		this.getChonDoUongChucNang().xemDanhSachChonDoUong();

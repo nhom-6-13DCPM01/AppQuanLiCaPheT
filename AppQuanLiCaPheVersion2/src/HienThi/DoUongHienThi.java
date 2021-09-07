@@ -27,6 +27,8 @@ public class DoUongHienThi {
 		System.out.println("5. Thoát");
 		System.out.print("Nhập lựa chọn: ");
 	}
+	
+	//Hiển thị loại đồ uống để thêm
 	public void hienThiLoaiDoUong() {
 		System.out.println("1. Cà phê");
 		System.out.println("2. Sinh tố");
@@ -36,6 +38,8 @@ public class DoUongHienThi {
 		System.out.println("6. Topping");
 		System.out.print("Nhập lựa chọn: ");
 	}
+	
+	//Xử lý các lựa chọn của người dùng và có menu ở trong
 	public void xuLy() {
 		int luaChon = 0;
 		do {

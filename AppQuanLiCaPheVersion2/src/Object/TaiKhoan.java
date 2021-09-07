@@ -3,13 +3,11 @@ package Object;
 import java.util.Scanner;
 
 public class TaiKhoan {
-	//thuộc tính
 	private static int count = 0;
 	Scanner sc = new Scanner(System.in);
 	private int idTaiKhoan = 0;
 	private String tenDangNhap, matKhau, ten;
 	
-	//hàm tạo
 	public TaiKhoan() {
 		this.setIdTaiKhoan(++count);
 	}
@@ -20,7 +18,6 @@ public class TaiKhoan {
 		this.setTen(ten);
 	}
 	
-	//get set
 	public static int getCount() {
 		return TaiKhoan.count;
 	}
@@ -40,11 +37,9 @@ public class TaiKhoan {
 	public void setTenDangNhap(String tenDangNhap) {
 		this.tenDangNhap = tenDangNhap;
 	}
-
 	public String getMatKhau() {
 		return this.matKhau;
 	}
-
 	public void setMatKhau(String matKhau) {
 		this.matKhau = matKhau;
 	}
@@ -55,11 +50,11 @@ public class TaiKhoan {
 		this.ten = ten;
 	}
 
-	//phương thức
 	//hiển thị
 	public void display() {
 		System.out.printf("\n%-3d %-30s %-30s %s\n",this.getIdTaiKhoan(),this.getTenDangNhap(),this.getMatKhau(),this.getTen());
 	}
+	
 	//nhập thông tin
 	public void input() {
 		System.out.print("Nhập tên đăng nhập: ");

@@ -19,10 +19,11 @@ public class TaiKhoanChucNang {
 		this.danhSachTaiKhoan = danhSachTaiKhoan;
 	}
 	
+	//Muốn thêm tài khoản thì tên đăng nhập và mật khẩu không được trùng
 	public void themTaiKhoan() {
 		TaiKhoan taiKhoan = new TaiKhoan();
 		do {
-		taiKhoan.input();
+			taiKhoan.input();
 		}while(this.kiemTraTrung(taiKhoan.getTenDangNhap(), taiKhoan.getMatKhau()));
 		this.getDanhSachTaiKhoan().themTaiKhoan(taiKhoan);
 		TaiKhoan.setCount(taiKhoan.getIdTaiKhoan());
@@ -32,20 +33,24 @@ public class TaiKhoanChucNang {
 		String tenDangNhap = sc.nextLine();
 		this.getDanhSachTaiKhoan().xoaTaiKhoanTheoTenDangNhap(tenDangNhap);
 	}
+	
+	//Cập nhật bằng cách tìm và thay đổi trong danh sách đã lấy ra. Để phục vụ đúng thì lấy hàm thêm và xóa
 	public void capNhatTaiKhoan() {
+		TaiKhoan taiKhoan = null;
 		System.out.print("Nhập tên đăng nhập cần cập nhật: ");
 		String tenDangNhap = sc.nextLine();
 		Iterator<TaiKhoan> j = this.getDanhSachTaiKhoan().layDanhSachTaiKhoan();
 		Iterator<TaiKhoan> i = this.getDanhSachTaiKhoan().timTaiKhoanTheoTenDangNhap(tenDangNhap);
 		if(i.hasNext()) {
 			TaiKhoan taiKhoanSoSanh = (TaiKhoan)i.next();
-			for(;j.hasNext();) {
-				TaiKhoan taiKhoan = (TaiKhoan)j.next();
-				if(taiKhoan == taiKhoanSoSanh)
-					do {
-						taiKhoan.input();
-					} while (this.kiemTraTrung(taiKhoan.getTenDangNhap(), taiKhoan.getMatKhau()));
-			}
+				for(;j.hasNext();) {
+					taiKhoan = (TaiKhoan)j.next();
+					TaiKhoan.setCount(taiKhoan.getIdTaiKhoan()-1);
+					if(taiKhoan == taiKhoanSoSanh) {
+						this.getDanhSachTaiKhoan().xoaTaiKhoanTheoTenDangNhap(tenDangNhap);
+						this.themTaiKhoan();
+					}
+				}		
 		}else {
 			System.out.println("Không tìm thấy");
 		}
@@ -62,6 +67,8 @@ public class TaiKhoanChucNang {
 			System.out.println("Không tìm thấy");
 		}
 	}
+	
+	//Hiển thị danh sách đã lấy ra
 	public void xemDanhSachTaiKhoan() {
 		Iterator<TaiKhoan> i = this.getDanhSachTaiKhoan().layDanhSachTaiKhoan();
 		if(i.hasNext()) {

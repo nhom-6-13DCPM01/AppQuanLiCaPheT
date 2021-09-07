@@ -1,3 +1,4 @@
+
 package ChucNang;
 
 import java.util.*;
@@ -11,6 +12,7 @@ public class DoUongChucNang {
 	
 	public DoUongChucNang() {
 		this.setDanhSachDoUong(new DanhSachDoUong());
+		DoUong.setCount(0);
 	}
 
 	public DanhSachDoUong getDanhSachDoUong() {
@@ -20,6 +22,7 @@ public class DoUongChucNang {
 		this.danhSachDoUong = danhSachDoUong;
 	}
 	
+	//Trước khi thêm đồ uống phải chọn loại đồ uống
 	public void themDoUong() {
 		DoUong doUong = new DoUong();
 		int luaChon = Integer.parseInt(sc.nextLine());
@@ -43,15 +46,18 @@ public class DoUongChucNang {
 			doUong.input();
 			doUong.setLoaiMon(LoaiDoUong.TOPPING);break;
 		}
+		this.getDanhSachDoUong().themDoUong(doUong);
 	}
 	public void xoaDoUong() {
 		System.out.print("Nhập tên món cần xóa: ");
 		String tenDoUong = sc.nextLine();
 		this.getDanhSachDoUong().xoaDoUongTheoTen(tenDoUong);
 	}
+	
+	//Cập nhật bằng việc tìm là lưu vào danh sách đã lấy ra
 	public void capNhatDoUong() {
 		DoUongHienThi doUongHienThi = new DoUongHienThi();
-		System.out.println("Nhập tên món cần cập nhật: ");
+		System.out.print("Nhập tên món cần cập nhật: ");
 		String tenDoUong = sc.nextLine();
 		Iterator<DoUong> j = this.getDanhSachDoUong().layDanhSachDoUong();
 		Iterator<DoUong> i = this.getDanhSachDoUong().timDoUongTheoTen(tenDoUong);
@@ -89,7 +95,7 @@ public class DoUongChucNang {
 		}
 	}
 	public void timDoUong() {
-		System.out.println("Nhập tên món: ");
+		System.out.print("Nhập tên món: ");
 		String tenDoUong = sc.nextLine();
 		Iterator<DoUong> i = this.getDanhSachDoUong().timDoUongTheoTen(tenDoUong);
 		if(i.hasNext()) {
@@ -100,6 +106,8 @@ public class DoUongChucNang {
 			System.out.println("Không tìm thấy");
 		}
 	}
+	
+	//Hiển thị danh sách đã lấy ra
 	public void xemDanhSachDoUong() {
 		Iterator<DoUong> i = this.getDanhSachDoUong().layDanhSachDoUong();
 		if(i.hasNext()) {

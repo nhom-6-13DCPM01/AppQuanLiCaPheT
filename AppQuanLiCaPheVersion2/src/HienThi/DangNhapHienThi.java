@@ -39,6 +39,8 @@ public class DangNhapHienThi {
 		System.out.println("2. Thoát");
 		System.out.print("Nhập lựa chọn: ");
 	}
+	
+	//Dùng để người dùng đăng nhập và tự động kiểm tra và phân quyền sử dụng
 	public void dangNhap() {
 		System.out.print("Tên đăng nhập: ");
 		String tenDangNhap = sc.nextLine();
@@ -54,6 +56,8 @@ public class DangNhapHienThi {
 			}
 		}
 	}
+	
+	//Xử lý các lựa chọn của người dùng và có menu ở trong
 	public void xuLy() {
 		int luaChon = 0;
 		do {
