@@ -41,7 +41,8 @@ public class QuanLiHoaDon {
 		for(Iterator<HoaDon> i = this.quanLiHoaDon.iterator();i.hasNext();) {
 			HoaDon hoaDon = (HoaDon)i.next();
 			if(hoaDon.getIdHoaDon() == ID)
-				danhSachTim.add(hoaDon);
+				continue;
+			danhSachTim.add(hoaDon);
 			return danhSachTim.iterator();
 		}
 		return null;

@@ -55,8 +55,9 @@ public class QuanLiNhanVien {
 		List<NhanVien> danhSachTim = new ArrayList<NhanVien>();
 		for(Iterator<NhanVien> i = this.quanLiNhanVien.iterator();i.hasNext();) {
 			NhanVien nhanVien = (NhanVien)i.next();
-			if(nhanVien.getIdNhanVien() == ID)
-				danhSachTim.add(nhanVien);
+			if(nhanVien.getIdNhanVien() != ID)
+				continue;
+			danhSachTim.add(nhanVien);
 			return danhSachTim.iterator();
 		}
 		return null;

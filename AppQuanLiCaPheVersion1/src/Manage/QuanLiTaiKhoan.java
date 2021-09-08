@@ -55,8 +55,9 @@ public class QuanLiTaiKhoan {
 		List<TaiKhoan> danhSachTim = new ArrayList<TaiKhoan>();
 		for(Iterator<TaiKhoan> i = this.quanLiTaiKhoan.iterator();i.hasNext();) {
 			TaiKhoan taiKhoan = (TaiKhoan)i.next();
-			if(taiKhoan.getIdTaiKhoan() == ID)
-				danhSachTim.add(taiKhoan);
+			if(taiKhoan.getIdTaiKhoan() != ID)
+				continue;
+			danhSachTim.add(taiKhoan);
 			return danhSachTim.iterator();
 		}
 		return null;

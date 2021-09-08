@@ -55,8 +55,9 @@ public class QuanLiMon {
 		List<Mon> danhSachTim = new ArrayList<Mon>();
 		for(Iterator<Mon> i = this.quanLiMon.iterator();i.hasNext();) {
 			Mon mon = (Mon)i.next();
-			if(mon.getIdMon() == ID)
-				danhSachTim.add(mon);
+			if(mon.getIdMon() != ID)
+				continue;
+			danhSachTim.add(mon);
 			return danhSachTim.iterator();
 		}
 		return null;

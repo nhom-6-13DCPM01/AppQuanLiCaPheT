@@ -55,8 +55,9 @@ public class QuanLiKhachHang {
 		List<KhachHang> danhSachTim = new ArrayList<KhachHang>();
 		for(Iterator<KhachHang> i = this.quanLiKhachHang.iterator();i.hasNext();) {
 			KhachHang khachHang = (KhachHang)i.next();
-			if(khachHang.getIdKhachHang() == ID)
-				danhSachTim.add(khachHang);
+			if(khachHang.getIdKhachHang() != ID)
+				continue;
+			danhSachTim.add(khachHang);
 			return danhSachTim.iterator();
 		}
 		return null;
